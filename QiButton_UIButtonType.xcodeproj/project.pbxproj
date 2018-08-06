@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE4BED86211806CC001CF8D7 /* QiButton_ButtonTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4BED85211806CC001CF8D7 /* QiButton_ButtonTypeViewController.m */; };
 		EEBBA37421170C7F006B2D37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBBA37321170C7F006B2D37 /* AppDelegate.m */; };
-		EEBBA37721170C7F006B2D37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBBA37621170C7F006B2D37 /* ViewController.m */; };
-		EEBBA37A21170C7F006B2D37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBBA37821170C7F006B2D37 /* Main.storyboard */; };
 		EEBBA37C21170C81006B2D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEBBA37B21170C81006B2D37 /* Assets.xcassets */; };
 		EEBBA37F21170C81006B2D37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBBA37D21170C81006B2D37 /* LaunchScreen.storyboard */; };
 		EEBBA38221170C81006B2D37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBBA38121170C81006B2D37 /* main.m */; };
@@ -35,12 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE4BED84211806CC001CF8D7 /* QiButton_ButtonTypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiButton_ButtonTypeViewController.h; sourceTree = "<group>"; };
+		EE4BED85211806CC001CF8D7 /* QiButton_ButtonTypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiButton_ButtonTypeViewController.m; sourceTree = "<group>"; };
 		EEBBA36F21170C7F006B2D37 /* QiButton_UIButtonType.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiButton_UIButtonType.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBBA37221170C7F006B2D37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EEBBA37321170C7F006B2D37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EEBBA37521170C7F006B2D37 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EEBBA37621170C7F006B2D37 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EEBBA37921170C7F006B2D37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEBBA37B21170C81006B2D37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEBBA37E21170C81006B2D37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEBBA38021170C81006B2D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,10 +102,9 @@
 			children = (
 				EEBBA37221170C7F006B2D37 /* AppDelegate.h */,
 				EEBBA37321170C7F006B2D37 /* AppDelegate.m */,
-				EEBBA37521170C7F006B2D37 /* ViewController.h */,
-				EEBBA37621170C7F006B2D37 /* ViewController.m */,
+				EE4BED84211806CC001CF8D7 /* QiButton_ButtonTypeViewController.h */,
+				EE4BED85211806CC001CF8D7 /* QiButton_ButtonTypeViewController.m */,
 				EEBBA3A42117198E006B2D37 /* PrefixHeader.pch */,
-				EEBBA37821170C7F006B2D37 /* Main.storyboard */,
 				EEBBA37B21170C81006B2D37 /* Assets.xcassets */,
 				EEBBA37D21170C81006B2D37 /* LaunchScreen.storyboard */,
 				EEBBA38021170C81006B2D37 /* Info.plist */,
@@ -239,7 +236,6 @@
 			files = (
 				EEBBA37F21170C81006B2D37 /* LaunchScreen.storyboard in Resources */,
 				EEBBA37C21170C81006B2D37 /* Assets.xcassets in Resources */,
-				EEBBA37A21170C7F006B2D37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEBBA37721170C7F006B2D37 /* ViewController.m in Sources */,
+				EE4BED86211806CC001CF8D7 /* QiButton_ButtonTypeViewController.m in Sources */,
 				EEBBA38221170C81006B2D37 /* main.m in Sources */,
 				EEBBA37421170C7F006B2D37 /* AppDelegate.m in Sources */,
 			);
@@ -302,14 +298,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EEBBA37821170C7F006B2D37 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EEBBA37921170C7F006B2D37 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EEBBA37D21170C81006B2D37 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
