@@ -9,14 +9,17 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+
 /** 承载button的可变数组 */
 @property (nonatomic,strong) NSMutableArray<UIButton *> *buttonArrayM;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self prepareData];
     [self buttonType];
 }
@@ -28,9 +31,11 @@
 
 
 #pragma mark - UIButtonType
+
 - (void)buttonType{
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     NSArray <NSString *>*buttonTypeArr = @[@"UIButtonTypeCustom",
                                            @"UIButtonTypeSystem NS_ENUM_AVAILABLE_IOS(7_0)",
                                            @"UIButtonTypeDetailDisclosure",
@@ -93,8 +98,7 @@
                 btn.layer.shadowOpacity = 0.8;
                 btn.layer.shadowColor = [UIColor blackColor].CGColor;
                 btn.layer.shadowRadius = 8.0;
-            }
-            else if (buttonTypeIndex == 4 || buttonTypeIndex == 5) {
+            }else if (buttonTypeIndex == 4 || buttonTypeIndex == 5) {
                 //此处看字面意思UIButtonTypeInfoDark UIButtonTypeInfoLight  Dark 和 Light确实是一个暗一个亮 不过效果却不是如此
                 //在 iOS7的时候
                 [btn setBackgroundColor:[UIColor orangeColor]];
@@ -126,12 +130,12 @@
         [self.view addSubview:buttonContainerStackV];
         buttonContainerStackV.frame = self.view.bounds;
         buttonContainerStackV.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-        buttonContainerStackV.backgroundColor = [UIColor yellowColor];
     }
 }
 
 
 #pragma mark - Action functions
+
 - (void)buttonTypeButtonClicked:(UIButton *)sender{
     
     if (sender.tag == 8) {
@@ -162,12 +166,12 @@
     WWLog(@"ContentRectForBounds: %@",NSStringFromCGRect([sender contentRectForBounds:sender.bounds]));
     WWLog(@"titleRectForBounds: %@",NSStringFromCGRect([sender titleRectForContentRect:sender.bounds]));
     WWLog(@"imageRectForBounds: %@",NSStringFromCGRect([sender imageRectForContentRect:sender.bounds]));
-    WWLog(@"imageEdgeInsets: %@",NSStringFromUIEdgeInsets([sender imageEdgeInsets]));
     
 }
 
 
 #pragma mark - 解释说明相关文字
+
 - (void)readMe{
     
 #if 0
