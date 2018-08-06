@@ -46,9 +46,10 @@
     
     for (NSInteger buttonTypeI = 0 ; buttonTypeI < buttonTypes.count;) {
         UIButton *btn = [UIButton buttonWithType:buttonTypeI];
+        btn.tag = buttonTypeI;
         
-#if 0
         // 经测试 打印的btn.buttonType 为 UIButtonTypeCustom 不过看效果猜测默认创建的UIButton的是 UIButtonSystem 的样式的
+#if 0
         if (buttonTypeI == 1) {
             btn = [UIButton new];
             [btn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateNormal];
@@ -56,10 +57,8 @@
         }
 #endif
         
-        [_buttonTypeButtons addObject:btn];
         [self.view addSubview:btn];
-        
-        btn.tag = buttonTypeI;
+        [_buttonTypeButtons addObject:btn];
         [btn addTarget:self action:@selector(buttonTypeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         
         // btn.reversesTitleShadowWhenHighlighted = NO;
@@ -114,7 +113,7 @@
             maskLayer.frame = CGRectMake(0, 0, SCREEN_WIDTH, (SCREEN_HEIGHT - WWStatusBarNavigationBarHeight) / buttonTypes.count);
             maskLayer.path = bezierPath.CGPath;
             btn.layer.mask = maskLayer;
-        } else if(buttonTypeI == buttonTypes.count) {
+        } else if(buttonTypeI == buttonTypes.count - 1) {
             [btn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateNormal];
             [btn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateHighlighted];
         }
