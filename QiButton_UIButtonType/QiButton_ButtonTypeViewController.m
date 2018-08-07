@@ -8,21 +8,17 @@
 
 #import "QiButton_ButtonTypeViewController.h"
 
-@interface QiButton_ButtonTypeViewController ()
 
-//! 承载button的可变数组
-@property (nonatomic, strong) NSMutableArray<UIButton *> *buttonTypeButtons;
+@interface QiButton_ButtonTypeViewController ()
 
 @end
 
 @implementation QiButton_ButtonTypeViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     self.title = @"UIButtonType";
-    _buttonTypeButtons = [NSMutableArray array];
     
     [self buttonType];
 }
@@ -33,8 +29,6 @@
 
 - (void)buttonType {
     
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    
     NSArray <NSString *>*buttonTypes = @[@"UIButtonTypeCustom",
                                          @"UIButtonTypeSystem NS_ENUM_AVAILABLE_IOS(7_0)",
                                          @"UIButtonTypeDetailDisclosure",
@@ -42,85 +36,41 @@
                                          @"UIButtonTypeInfoDark",
                                          @"UIButtonTypeContactAdd",
                                          @"UIButtonTypePlain API_AVAILABLE(tvos(11.0)) API_UNAVAILABLE(ios, watchos)",
+                                         @"7 = UIButtonTypePlain | UIButtonTypeSystem",
                                          @"UIButtonTypeRoundedRect = UIButtonTypeSystem",
-                                         @"复位按钮复位按钮复位按钮复位按钮"];
+                                         @"new a Button"];
+    CGFloat btnHeight = [UIScreen mainScreen].bounds.size.height / buttonTypes.count;
     
-    for (NSInteger buttonTypeI = 0 ; buttonTypeI < buttonTypes.count;) {
-        UIButton *btn = [UIButton buttonWithType:buttonTypeI];
-        btn.tag = buttonTypeI;
+    for (NSInteger buttonTypeI = 0 ; buttonTypeI < buttonTypes.count; buttonTypeI ++) {
+        UIButton *buttonTypeBtn = [UIButton buttonWithType:buttonTypeI];
+        // 设置最后的一个按钮 new的方式创建
+        if (buttonTypeI == buttonTypes.count - 1) {
+            // 经测试 打印的btn.buttonType 为 UIButtonTypeCustom 观察button的显示样式也是如此
+            buttonTypeBtn = [UIButton new];
+            [buttonTypeBtn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateNormal];
+            [buttonTypeBtn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateHighlighted];
+        } else if(buttonTypeI == buttonTypes.count - 2) {
+            /** 注意UIButtonTypeRoundedRect = UIButtonTypeSystem 真正的值为 1 而不是7
+             如果以 [UIButton buttonWithType:7] 方式创建UIButton
+             相当于 [UIButton buttonWithType:UIButtonTypePlain | UIButtonTypeSystem];
+             */
+            buttonTypeBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+            [buttonTypeBtn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateNormal];
+            [buttonTypeBtn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateHighlighted];
+        } else if(buttonTypeI == UIButtonTypeCustom || buttonTypeI == UIButtonTypeSystem || buttonTypeI == UIButtonTypeRoundedRect) {
+            [buttonTypeBtn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateNormal];
+            [buttonTypeBtn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateHighlighted];
+        } else if(buttonTypeI == UIButtonTypeDetailDisclosure || buttonTypeI == UIButtonTypeInfoLight || buttonTypeI == UIButtonTypeInfoDark) {
+            buttonTypeBtn.showsTouchWhenHighlighted = YES;
+        }
+        [self.view addSubview:buttonTypeBtn];
+        buttonTypeBtn.frame = CGRectMake(.0, buttonTypeI * btnHeight, CGRectGetWidth(self.view.frame), btnHeight);
+        buttonTypeBtn.backgroundColor = (buttonTypeI % 2 ? [UIColor lightGrayColor] : [UIColor colorWithWhite:0.8 alpha:0.8]);
+        [buttonTypeBtn setTitle:buttonTypes[buttonTypeI] forState:UIControlStateNormal];
+        buttonTypeBtn.titleLabel.numberOfLines = 0;
         
-        // 经测试 打印的btn.buttonType 为 UIButtonTypeCustom 不过看效果猜测默认创建的UIButton的是 UIButtonSystem 的样式的
-#if 0
-        if (buttonTypeI == 1) {
-            btn = [UIButton new];
-            [btn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateNormal];
-            [btn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateHighlighted];
-        }
-#endif
-        
-        [self.view addSubview:btn];
-        [_buttonTypeButtons addObject:btn];
-        [btn addTarget:self action:@selector(buttonTypeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        
-        // btn.reversesTitleShadowWhenHighlighted = NO;
-        [btn setTitle:buttonTypes[buttonTypeI] forState:UIControlStateNormal];
-        btn.titleLabel.numberOfLines = 0;
-        
-        NSDictionary *foreAttriDict = @{NSForegroundColorAttributeName:[UIColor purpleColor]};
-        NSDictionary *aheadAttriDict = @{NSForegroundColorAttributeName:[UIColor blueColor]};
-        NSMutableAttributedString *attriM = [[NSMutableAttributedString alloc]initWithString:buttonTypes[buttonTypeI]];
-        [attriM addAttributes:foreAttriDict range:NSMakeRange(0, 12)];
-        [attriM addAttributes:aheadAttriDict range:NSMakeRange(12, (buttonTypes[buttonTypeI].length) - 12)];
-        [btn setAttributedTitle:attriM forState:UIControlStateSelected];
-        // [btn setAttributedTitle:attriM forState:UIControlStateNormal];
-        
-        buttonTypeI++;
-        [btn setBackgroundColor:[[UIColor redColor]colorWithAlphaComponent: 1.0 / buttonTypes.count * buttonTypeI]];
-        if(buttonTypeI == 1) {
-            [btn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateNormal];
-            [btn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateHighlighted];
-            // btn.adjustsImageWhenHighlighted = NO;
-        }
-        else if (buttonTypeI == 2) {
-            btn.layer.borderWidth = 6.0;
-            btn.layer.borderColor = [UIColor yellowColor].CGColor;
-        }
-        else if (buttonTypeI == 3) {
-            btn.layer.shadowOffset = CGSizeMake(2.0, 2.0);
-            btn.layer.cornerRadius = 5.0;
-            btn.layer.shadowOpacity = 0.8;
-            btn.layer.shadowColor = [UIColor blackColor].CGColor;
-            btn.layer.shadowRadius = 8.0;
-        }
-        else if (buttonTypeI == 4 || buttonTypeI == 5) {
-            /** 此处看字面意思UIButtonTypeInfoDark UIButtonTypeInfoLight
-              * Dark 和 Light意思一个暗一个亮 不过效果却不是如此
-              * iOS7及之后上边的三种的类型中UIButtonTypeInfoDark UIButtonTypeInfoLight效果是一样的
-              * 选中状态下UIButtonTypeInfoDark UIButtonTypeInfoLight文字图片都是白色的
-              * UIButtonTypeDetailDisclosure在选中状态下图片文字颜色较暗
-            */
-            [btn setBackgroundColor:[UIColor orangeColor]];
-            btn.layer.cornerRadius = 20.0;
-            btn.layer.masksToBounds = YES;
-            btn.tintColor = [UIColor purpleColor]; // Normal状态下 用于设置文字及图片的颜色 及选中的时候的文字的背景色的颜色
-        }
-        else if(buttonTypeI == (buttonTypes.count - 2)) {
-            
-        }
-        else if(buttonTypeI == buttonTypes.count - 1) {
-            [btn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateNormal];
-            [btn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateHighlighted];
-        }
+        [buttonTypeBtn addTarget:self action:@selector(buttonTypeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
-    // 把创建的按钮都放到UIStackView中 指定高度方面 UIStackView比较特殊 不像UIView直接创建的对象
-    UIStackView *buttonContainerStackV = [[UIStackView alloc]initWithArrangedSubviews:[_buttonTypeButtons copy]];
-    [self.view addSubview:buttonContainerStackV];
-    buttonContainerStackV.frame = self.view.bounds;
-    buttonContainerStackV.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    
-    buttonContainerStackV.alignment = UIStackViewAlignmentFill;
-    buttonContainerStackV.axis = UILayoutConstraintAxisVertical;
-    buttonContainerStackV.distribution = UIStackViewDistributionFillEqually;
 }
 
 
@@ -128,33 +78,7 @@
 
 - (void)buttonTypeButtonClicked:(UIButton *)sender {
     
-    if (sender.tag == _buttonTypeButtons.count - 1) {
-        // 复位tag
-        [_buttonTypeButtons enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            ((UIButton *)obj).selected = NO;
-        }];
-        return;
-    }
     sender.selected = !sender.selected;
-    
-    // 下边是一些属性方法
-    NSLog(@"currentTitle: %@", sender.currentTitle);
-    NSLog(@"currentImage: %@", sender.currentImage);
-    NSLog(@"currentBackgroundImage: %@", sender.currentBackgroundImage);
-    // ww注意 ：这种 设置在Normal状态的属性字符串的时候 下边的属性字符标题才会有值
-    // 否则的话 即使设置了 选中状态的属性字符串 下边也是没有值的
-    NSLog(@"currentAttributedTitle: %@", sender.currentAttributedTitle);
-    NSLog(@"currentTitleColor: %@", sender.currentTitleColor);
-    NSLog(@"currentTitleShadowColor: %@", sender.currentTitleShadowColor);
-    NSLog(@"imageForStateNormal: %@", [sender imageForState:UIControlStateNormal]);
-    NSLog(@"imageForStateSelected: %@", [sender imageForState:UIControlStateSelected]);
-    NSLog(@"contentInsets: %@", NSStringFromUIEdgeInsets([sender contentEdgeInsets]));
-    NSLog(@"titleEdgeInsets: %@", NSStringFromUIEdgeInsets([sender titleEdgeInsets]));
-    NSLog(@"imageEdgeInsets: %@", NSStringFromUIEdgeInsets([sender imageEdgeInsets]));
-    NSLog(@"backgroundRectForBounds: %@", NSStringFromCGRect([sender backgroundRectForBounds:sender.bounds]));
-    NSLog(@"ContentRectForBounds: %@", NSStringFromCGRect([sender contentRectForBounds:sender.bounds]));
-    NSLog(@"titleRectForBounds: %@", NSStringFromCGRect([sender titleRectForContentRect:sender.bounds]));
-    NSLog(@"imageRectForBounds: %@", NSStringFromCGRect([sender imageRectForContentRect:sender.bounds]));
 }
 
 
@@ -176,22 +100,27 @@
         
         UIButtonTypeRoundedRect = UIButtonTypeSystem   // Deprecated, use UIButtonTypeSystem instead
     };
+    
     //    一些个人理解
 #endif
     /**
-     * UIButtonType 如下
+     * UIButtonType 如下:
      
-     UIButtonTypeCustom     //没有按钮样式 默认new的是这种样式
-     No button style.
-     UIButtonTypeSystem     //系统样式
-     A system style button, such as those shown in navigation bars and toolbars.
+     UIButtonTypeCustom
+     No button style.  没有按钮样式 默认new的是这种样式
+     
+     UIButtonTypeSystem
+     A system style button, such as those shown in navigation bars and toolbars.  系统样式
      
      UIButtonTypeDetailDisclosure
-     A detail disclosure button.     // 图片为圆圈中有个字母i 详情
-     UIButtonTypeInfoLight      // 图片为圆圈中有个字母i 亮的信息 类型
-     An information button that has a light background.
-     UIButtonTypeInfoDark       // 图片为圆圈中有个字母i 暗的信息类型
-     An information button that has a dark background.
+     A detail disclosure button. 图片为圆圈中有个字母i 详情
+     
+     UIButtonTypeInfoLight
+     An information button that has a light background. 图片为圆圈中有个字母i 亮的背景的信息类型
+     
+     UIButtonTypeInfoDark
+     An information button that has a dark background. 图片为圆圈中有个字母i 暗的背景的信息类型
+     
      
      * 此处看字面意思UIButtonTypeInfoDark UIButtonTypeInfoLight
      * Dark 和 Light意思一个暗一个亮 不过效果却不是如此
@@ -199,12 +128,14 @@
      * 选中状态下UIButtonTypeInfoDark UIButtonTypeInfoLight文字图片都是白色的
      * UIButtonTypeDetailDisclosure在选中状态下图片文字颜色较暗
      
-     UIButtonTypeContactAdd     // 加号图片  添加联系人的时候有的有用到
-     A contact add button.
-     UIButtonTypePlain          // 没有模糊背景视图的标准的系统按钮 不过看起来说是API不支持 iOS和 WatchOS的 只支持 tvOS
-     A standard system button without a blurred background view.
-     UIButtonTypeRoundedRect    // 方形的圆角形式的按钮在iOS7及之后就没有这个样式了需要使用border的方式来做到效果
-     A rounded-rectangle style button.
+     UIButtonTypeContactAdd
+     A contact add button.  图片为圆圈中 加内部一个 ➕  添加联系人的时候有的有用到
+     
+     UIButtonTypePlain
+     A standard system button without a blurred background view. 没有模糊背景视图的标准的系统按钮 不过看起来说是API不支持 iOS和 WatchOS的 只支持 tvOS
+     
+     UIButtonTypeRoundedRect
+     A rounded-rectangle style button.  方形的圆角形式的按钮在iOS7及之后就没有这个样式了需要使用border的方式来做到效果
      */
 }
 
