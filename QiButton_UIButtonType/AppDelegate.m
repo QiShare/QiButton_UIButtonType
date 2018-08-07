@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  QiButton_UIButtonType
 //
-//  Created by wangyongwang on 2018/8/5.
+//  Created by QiShare on 2018/8/5.
 //  Copyright © 2018年 QiShare. All rights reserved.
 //
 

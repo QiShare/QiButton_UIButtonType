@@ -10,28 +10,8 @@
 		EE4BED86211806CC001CF8D7 /* QiButton_ButtonTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4BED85211806CC001CF8D7 /* QiButton_ButtonTypeViewController.m */; };
 		EEBBA37421170C7F006B2D37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBBA37321170C7F006B2D37 /* AppDelegate.m */; };
 		EEBBA37C21170C81006B2D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEBBA37B21170C81006B2D37 /* Assets.xcassets */; };
-		EEBBA37F21170C81006B2D37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBBA37D21170C81006B2D37 /* LaunchScreen.storyboard */; };
 		EEBBA38221170C81006B2D37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBBA38121170C81006B2D37 /* main.m */; };
-		EEBBA38C21170C81006B2D37 /* QiButton_UIButtonTypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBBA38B21170C81006B2D37 /* QiButton_UIButtonTypeTests.m */; };
-		EEBBA39721170C81006B2D37 /* QiButton_UIButtonTypeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBBA39621170C81006B2D37 /* QiButton_UIButtonTypeUITests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		EEBBA38821170C81006B2D37 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EEBBA36721170C7F006B2D37 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EEBBA36E21170C7F006B2D37;
-			remoteInfo = QiButton_UIButtonType;
-		};
-		EEBBA39321170C81006B2D37 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EEBBA36721170C7F006B2D37 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EEBBA36E21170C7F006B2D37;
-			remoteInfo = QiButton_UIButtonType;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EE4BED84211806CC001CF8D7 /* QiButton_ButtonTypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiButton_ButtonTypeViewController.h; sourceTree = "<group>"; };
@@ -40,34 +20,12 @@
 		EEBBA37221170C7F006B2D37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EEBBA37321170C7F006B2D37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EEBBA37B21170C81006B2D37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EEBBA37E21170C81006B2D37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEBBA38021170C81006B2D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEBBA38121170C81006B2D37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EEBBA38721170C81006B2D37 /* QiButton_UIButtonTypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiButton_UIButtonTypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEBBA38B21170C81006B2D37 /* QiButton_UIButtonTypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiButton_UIButtonTypeTests.m; sourceTree = "<group>"; };
-		EEBBA38D21170C81006B2D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEBBA39221170C81006B2D37 /* QiButton_UIButtonTypeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiButton_UIButtonTypeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEBBA39621170C81006B2D37 /* QiButton_UIButtonTypeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiButton_UIButtonTypeUITests.m; sourceTree = "<group>"; };
-		EEBBA39821170C81006B2D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEBBA3A42117198E006B2D37 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EEBBA36C21170C7F006B2D37 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EEBBA38421170C81006B2D37 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EEBBA38F21170C81006B2D37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,8 +39,6 @@
 			isa = PBXGroup;
 			children = (
 				EEBBA37121170C7F006B2D37 /* QiButton_UIButtonType */,
-				EEBBA38A21170C81006B2D37 /* QiButton_UIButtonTypeTests */,
-				EEBBA39521170C81006B2D37 /* QiButton_UIButtonTypeUITests */,
 				EEBBA37021170C7F006B2D37 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,8 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				EEBBA36F21170C7F006B2D37 /* QiButton_UIButtonType.app */,
-				EEBBA38721170C81006B2D37 /* QiButton_UIButtonTypeTests.xctest */,
-				EEBBA39221170C81006B2D37 /* QiButton_UIButtonTypeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,31 +58,11 @@
 				EEBBA37321170C7F006B2D37 /* AppDelegate.m */,
 				EE4BED84211806CC001CF8D7 /* QiButton_ButtonTypeViewController.h */,
 				EE4BED85211806CC001CF8D7 /* QiButton_ButtonTypeViewController.m */,
-				EEBBA3A42117198E006B2D37 /* PrefixHeader.pch */,
 				EEBBA37B21170C81006B2D37 /* Assets.xcassets */,
-				EEBBA37D21170C81006B2D37 /* LaunchScreen.storyboard */,
 				EEBBA38021170C81006B2D37 /* Info.plist */,
 				EEBBA38121170C81006B2D37 /* main.m */,
 			);
 			path = QiButton_UIButtonType;
-			sourceTree = "<group>";
-		};
-		EEBBA38A21170C81006B2D37 /* QiButton_UIButtonTypeTests */ = {
-			isa = PBXGroup;
-			children = (
-				EEBBA38B21170C81006B2D37 /* QiButton_UIButtonTypeTests.m */,
-				EEBBA38D21170C81006B2D37 /* Info.plist */,
-			);
-			path = QiButton_UIButtonTypeTests;
-			sourceTree = "<group>";
-		};
-		EEBBA39521170C81006B2D37 /* QiButton_UIButtonTypeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EEBBA39621170C81006B2D37 /* QiButton_UIButtonTypeUITests.m */,
-				EEBBA39821170C81006B2D37 /* Info.plist */,
-			);
-			path = QiButton_UIButtonTypeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,42 +85,6 @@
 			productReference = EEBBA36F21170C7F006B2D37 /* QiButton_UIButtonType.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EEBBA38621170C81006B2D37 /* QiButton_UIButtonTypeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EEBBA39E21170C81006B2D37 /* Build configuration list for PBXNativeTarget "QiButton_UIButtonTypeTests" */;
-			buildPhases = (
-				EEBBA38321170C81006B2D37 /* Sources */,
-				EEBBA38421170C81006B2D37 /* Frameworks */,
-				EEBBA38521170C81006B2D37 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EEBBA38921170C81006B2D37 /* PBXTargetDependency */,
-			);
-			name = QiButton_UIButtonTypeTests;
-			productName = QiButton_UIButtonTypeTests;
-			productReference = EEBBA38721170C81006B2D37 /* QiButton_UIButtonTypeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		EEBBA39121170C81006B2D37 /* QiButton_UIButtonTypeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EEBBA3A121170C81006B2D37 /* Build configuration list for PBXNativeTarget "QiButton_UIButtonTypeUITests" */;
-			buildPhases = (
-				EEBBA38E21170C81006B2D37 /* Sources */,
-				EEBBA38F21170C81006B2D37 /* Frameworks */,
-				EEBBA39021170C81006B2D37 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EEBBA39421170C81006B2D37 /* PBXTargetDependency */,
-			);
-			name = QiButton_UIButtonTypeUITests;
-			productName = QiButton_UIButtonTypeUITests;
-			productReference = EEBBA39221170C81006B2D37 /* QiButton_UIButtonTypeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,14 +96,6 @@
 				TargetAttributes = {
 					EEBBA36E21170C7F006B2D37 = {
 						CreatedOnToolsVersion = 9.4.1;
-					};
-					EEBBA38621170C81006B2D37 = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = EEBBA36E21170C7F006B2D37;
-					};
-					EEBBA39121170C81006B2D37 = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = EEBBA36E21170C7F006B2D37;
 					};
 				};
 			};
@@ -223,8 +113,6 @@
 			projectRoot = "";
 			targets = (
 				EEBBA36E21170C7F006B2D37 /* QiButton_UIButtonType */,
-				EEBBA38621170C81006B2D37 /* QiButton_UIButtonTypeTests */,
-				EEBBA39121170C81006B2D37 /* QiButton_UIButtonTypeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,22 +122,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEBBA37F21170C81006B2D37 /* LaunchScreen.storyboard in Resources */,
 				EEBBA37C21170C81006B2D37 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EEBBA38521170C81006B2D37 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EEBBA39021170C81006B2D37 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,47 +139,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EEBBA38321170C81006B2D37 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EEBBA38C21170C81006B2D37 /* QiButton_UIButtonTypeTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EEBBA38E21170C81006B2D37 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EEBBA39721170C81006B2D37 /* QiButton_UIButtonTypeUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EEBBA38921170C81006B2D37 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EEBBA36E21170C7F006B2D37 /* QiButton_UIButtonType */;
-			targetProxy = EEBBA38821170C81006B2D37 /* PBXContainerItemProxy */;
-		};
-		EEBBA39421170C81006B2D37 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EEBBA36E21170C7F006B2D37 /* QiButton_UIButtonType */;
-			targetProxy = EEBBA39321170C81006B2D37 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EEBBA37D21170C81006B2D37 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EEBBA37E21170C81006B2D37 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EEBBA39921170C81006B2D37 /* Debug */ = {
@@ -424,8 +257,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/QiButton_UIButtonType/PrefixHeader.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = QiButton_UIButtonType/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -443,8 +276,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/QiButton_UIButtonType/PrefixHeader.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = QiButton_UIButtonType/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,76 +287,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qishare.wyw.QiButton-UIButtonType.QiButton-UIButtonType";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		EEBBA39F21170C81006B2D37 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = QiButton_UIButtonTypeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.qishare.wyw.QiButton-UIButtonType.QiButton-UIButtonTypeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiButton_UIButtonType.app/QiButton_UIButtonType";
-			};
-			name = Debug;
-		};
-		EEBBA3A021170C81006B2D37 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = QiButton_UIButtonTypeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.qishare.wyw.QiButton-UIButtonType.QiButton-UIButtonTypeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiButton_UIButtonType.app/QiButton_UIButtonType";
-			};
-			name = Release;
-		};
-		EEBBA3A221170C81006B2D37 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = QiButton_UIButtonTypeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.qishare.wyw.QiButton-UIButtonType.QiButton-UIButtonTypeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = QiButton_UIButtonType;
-			};
-			name = Debug;
-		};
-		EEBBA3A321170C81006B2D37 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = QiButton_UIButtonTypeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.qishare.wyw.QiButton-UIButtonType.QiButton-UIButtonTypeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = QiButton_UIButtonType;
 			};
 			name = Release;
 		};
@@ -544,24 +307,6 @@
 			buildConfigurations = (
 				EEBBA39C21170C81006B2D37 /* Debug */,
 				EEBBA39D21170C81006B2D37 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EEBBA39E21170C81006B2D37 /* Build configuration list for PBXNativeTarget "QiButton_UIButtonTypeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EEBBA39F21170C81006B2D37 /* Debug */,
-				EEBBA3A021170C81006B2D37 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EEBBA3A121170C81006B2D37 /* Build configuration list for PBXNativeTarget "QiButton_UIButtonTypeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EEBBA3A221170C81006B2D37 /* Debug */,
-				EEBBA3A321170C81006B2D37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

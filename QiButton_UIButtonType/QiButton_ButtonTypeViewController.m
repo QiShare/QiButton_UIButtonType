@@ -2,7 +2,7 @@
 //  QiButton_ButtonTypeViewController.m
 //  QiButton_UIButtonType
 //
-//  Created by wangyongwang on 2018/8/6.
+//  Created by QiShare on 2018/8/6.
 //  Copyright © 2018年 QiShare. All rights reserved.
 //
 
@@ -18,6 +18,7 @@
 @implementation QiButton_ButtonTypeViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.title = @"UIButtonType";
@@ -79,16 +80,19 @@
             [btn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateNormal];
             [btn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateHighlighted];
             // btn.adjustsImageWhenHighlighted = NO;
-        } else if (buttonTypeI == 2) {
+        }
+        else if (buttonTypeI == 2) {
             btn.layer.borderWidth = 6.0;
             btn.layer.borderColor = [UIColor yellowColor].CGColor;
-        } else if (buttonTypeI == 3) {
+        }
+        else if (buttonTypeI == 3) {
             btn.layer.shadowOffset = CGSizeMake(2.0, 2.0);
             btn.layer.cornerRadius = 5.0;
             btn.layer.shadowOpacity = 0.8;
             btn.layer.shadowColor = [UIColor blackColor].CGColor;
             btn.layer.shadowRadius = 8.0;
-        } else if (buttonTypeI == 4 || buttonTypeI == 5) {
+        }
+        else if (buttonTypeI == 4 || buttonTypeI == 5) {
             /** 此处看字面意思UIButtonTypeInfoDark UIButtonTypeInfoLight
               * Dark 和 Light意思一个暗一个亮 不过效果却不是如此
               * iOS7及之后上边的三种的类型中UIButtonTypeInfoDark UIButtonTypeInfoLight效果是一样的
@@ -99,21 +103,11 @@
             btn.layer.cornerRadius = 20.0;
             btn.layer.masksToBounds = YES;
             btn.tintColor = [UIColor purpleColor]; // Normal状态下 用于设置文字及图片的颜色 及选中的时候的文字的背景色的颜色
-        } else if(buttonTypeI == (buttonTypes.count - 2)) {
-            /** 注意使用下列的方式做圆角的时候一定要注意
-             *  传入的值Rect相关的值的时候 是否有值 否则会无法出现预期的效果
-             *  尤其像  bezierPathWithRoundedRect:btn.bounds 或 maskLayer.frame = btn.bounds 这种情况;
-             *  UIButton 设置指定圆角
-             *  https://www.jianshu.com/p/7bd6d1424d96
-             */
-            btn.backgroundColor = [UIColor cyanColor];
-            UIRectCorner rectC = UIRectCornerTopLeft | UIRectCornerBottomLeft | UIRectCornerTopRight | UIRectCornerBottomRight;
-            UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, SCREEN_WIDTH, (SCREEN_HEIGHT - WWStatusBarNavigationBarHeight) / buttonTypes.count) byRoundingCorners:rectC cornerRadii:CGSizeMake(30.0, 30.0)];
-            CAShapeLayer *maskLayer = [CAShapeLayer layer];
-            maskLayer.frame = CGRectMake(0, 0, SCREEN_WIDTH, (SCREEN_HEIGHT - WWStatusBarNavigationBarHeight) / buttonTypes.count);
-            maskLayer.path = bezierPath.CGPath;
-            btn.layer.mask = maskLayer;
-        } else if(buttonTypeI == buttonTypes.count - 1) {
+        }
+        else if(buttonTypeI == (buttonTypes.count - 2)) {
+            
+        }
+        else if(buttonTypeI == buttonTypes.count - 1) {
             [btn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateNormal];
             [btn setImage:[UIImage imageNamed:@"smallQiShareLogo"] forState:UIControlStateHighlighted];
         }
@@ -161,7 +155,6 @@
     NSLog(@"ContentRectForBounds: %@", NSStringFromCGRect([sender contentRectForBounds:sender.bounds]));
     NSLog(@"titleRectForBounds: %@", NSStringFromCGRect([sender titleRectForContentRect:sender.bounds]));
     NSLog(@"imageRectForBounds: %@", NSStringFromCGRect([sender imageRectForContentRect:sender.bounds]));
-    
 }
 
 
